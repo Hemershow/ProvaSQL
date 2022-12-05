@@ -1,0 +1,322 @@
+-- create database prova
+
+-- create table Aluno
+-- (
+--     id int IDENTITY(1,1) PRIMARY key,
+--     nome varchar(30),
+--     cpf varchar(12),
+--     data_nascimento Date,
+-- )
+
+-- create table Professor(
+--     id int IDENTITY(1,1) PRIMARY key,
+--     nome varchar(30),
+--     cpf varchar(12)
+-- )
+
+-- create table Curso(
+--     id int IDENTITY(1,1) PRIMARY key,
+--     nome varchar(30),
+--     ativo bit
+-- )
+
+-- create table Disciplina(
+--     id int IDENTITY(1,1) PRIMARY key,
+--     nome varchar(30),
+--     ativo bit
+-- )
+
+-- create table DisciplinaCurso(
+--     id int IDENTITY(1,1) PRIMARY key,
+--     idCurso int,
+--     idDisciplina Int,
+--     ativa bit
+-- )
+
+-- create table Turma(
+--     id int IDENTITY(1,1) PRIMARY key,
+--     idAluno int,
+--     idProfessor Int,
+--     idDisciplinaCurso int,
+--     nota1 int,
+--     nota2 int,
+--     nota3 int,
+--     nota4 int,
+--     notaFinal int,
+--     ativa bit
+-- )
+
+-- create table Pagamentos(
+--     id int IDENTITY(1,1) PRIMARY key,
+--     idAluno int,
+--     boleto date,
+--     situacao varchar(9)
+-- )
+
+-- ALTER TABLE Pagamentos
+-- ADD CONSTRAINT situacoesAceitas
+--   CHECK (situacao IN ('pendente', 'pago', 'em atraso'));
+
+-- alter table Disciplina
+-- add constraint ativo default 1 for ativo
+
+-- alter table Curso
+-- add constraint ativo2 default 1 for ativo
+
+-- INSERT INTO Aluno
+--     (nome, cpf, data_nascimento)
+-- VALUES
+--     ('Reinaldo', '123456789-01', '14/05/2001'),
+--     ('Arthur ', '123456789-02', '14/05/2002'),
+--     ('Davi ', '123456789-03', '14/05/2003'),
+--     ('Lucas', '123456789-04', '14/05/2004'),
+--     ('Luiz', '123456789-05', '14/05/2005'),
+--     ('Alícia', '123456789-06', '14/05/2006'),
+--     ('Bella', '123456789-07', '14/05/2007'),
+--     ('Micael ', '123456789-08', '14/05/2008'),
+--     ('Jade ', '123456789-09', '14/05/2009'),
+--     ('Matteo', '123456789-10', '14/05/2010'),
+--     ('Apollo ', '123456789-11', '14/05/2011'),
+--     ('Blue', '123456789-12', '14/05/2012'),
+--     ('Caetana', '123456789-13', '14/05/2013'),
+--     ('Cloé', '123456789-14', '14/05/2014'),
+--     ('Kayra', '123456789-15', '14/05/2015'),
+--     ('Cecília', '123456789-16', '14/05/2016'),
+--     ('Anthony', '123456789-17', '14/05/2017'),
+--     ('Ruan', '123456789-18', '14/05/2018'),
+--     ('Benício', '123456789-19', '14/05/2019'),
+--     ('Levi', '123456789-20', '14/05/2020')
+
+-- insert into Professor(nome,cpf)
+-- values('Reinaldo','098765123-14'),
+-- ('Fernanda','098765123-15'),
+-- ('Bertoldo','098765123-16'),
+-- ('Jupiter','098765123-17'),
+-- ('Faria','098765123-18')
+
+-- insert into Curso(nome)
+-- values ('Eng.Software'),
+-- ('Odontologia'),
+-- ('ADS')
+
+-- insert into Disciplina(nome)
+-- values('Calculo 1'),
+-- ('Processos de Software'),
+-- ('Arquitetura de Sistemas'),
+-- ('Calculo 2'),
+-- ('Banco de Dados'),
+-- ('Lógica de Programação'),
+-- ('Interface Humano Computador'),
+-- ('Segurança de Sistemas')
+
+-- insert into Turma(idAluno,idProfessor,idDisciplinaCurso,ativa)
+-- values(1,1,1,1)
+-- insert into Turma(idAluno,idProfessor,idDisciplinaCurso,ativa)
+-- values(2,1,1,1)
+-- insert into Turma(idAluno,idProfessor,idDisciplinaCurso,ativa)
+-- values(3,1,1,1)
+-- insert into Turma(idAluno,idProfessor,idDisciplinaCurso,ativa)
+-- values(4,1,1,1)
+-- insert into Turma(idAluno,idProfessor,idDisciplinaCurso,ativa)
+-- values(5,1,1,1)
+
+-- insert into Turma(idAluno,idProfessor,idDisciplinaCurso,ativa)
+-- values(6,2,2,1)
+-- insert into Turma(idAluno,idProfessor,idDisciplinaCurso,ativa)
+-- values(7,2,2,1)
+-- insert into Turma(idAluno,idProfessor,idDisciplinaCurso,ativa)
+-- values(8,2,2,1)
+-- insert into Turma(idAluno,idProfessor,idDisciplinaCurso,ativa)
+-- values(9,2,2,1)
+-- insert into Turma(idAluno,idProfessor,idDisciplinaCurso,ativa)
+-- values(10,2,2,1)
+
+-- insert into Turma(idAluno,idProfessor,idDisciplinaCurso,ativa)
+-- values(11,3,3,1)
+-- insert into Turma(idAluno,idProfessor,idDisciplinaCurso,ativa)
+-- values(12,3,3,1)
+-- insert into Turma(idAluno,idProfessor,idDisciplinaCurso,ativa)
+-- values(13,3,3,1)
+-- insert into Turma(idAluno,idProfessor,idDisciplinaCurso,ativa)
+-- values(14,3,3,1)
+-- insert into Turma(idAluno,idProfessor,idDisciplinaCurso,ativa)
+-- values(15,3,3,1)
+
+-- insert into Turma(idAluno,idProfessor,idDisciplinaCurso,ativa)
+-- values(16,4,4,1)
+-- insert into Turma(idAluno,idProfessor,idDisciplinaCurso,ativa)
+-- values(17,4,4,1)
+-- insert into Turma(idAluno,idProfessor,idDisciplinaCurso,ativa)
+-- values(18,4,4,1)
+-- insert into Turma(idAluno,idProfessor,idDisciplinaCurso,ativa)
+-- values(19,4,4,1)
+-- insert into Turma(idAluno,idProfessor,idDisciplinaCurso,ativa)
+-- values(20,4,4,1)
+
+-- update turma set nota1=1 where idAluno = 1 and idDisciplinaCurso = 1
+-- update turma set nota2=3 where idAluno = 1 and idDisciplinaCurso = 1
+-- update turma set nota3=5 where idAluno = 1 and idDisciplinaCurso = 1
+
+-- update turma set nota1=5 where idAluno = 2 and idDisciplinaCurso = 1
+-- update turma set nota2=6 where idAluno = 2 and idDisciplinaCurso = 1
+-- update turma set nota3=8 where idAluno = 2 and idDisciplinaCurso = 1
+
+-- update turma set nota1=6 where idAluno = 3 and idDisciplinaCurso = 1
+-- update turma set nota2=7 where idAluno = 3 and idDisciplinaCurso = 1
+-- update turma set nota3=8 where idAluno = 3 and idDisciplinaCurso = 1
+
+-- update turma set nota1=6 where idAluno = 3 and idDisciplinaCurso = 1
+-- update turma set nota2=7 where idAluno = 3 and idDisciplinaCurso = 1
+-- update turma set nota3=8 where idAluno = 3 and idDisciplinaCurso = 1
+
+-- update turma set nota1=4 where idAluno = 4 and idDisciplinaCurso = 1
+-- update turma set nota2=6 where idAluno = 4 and idDisciplinaCurso = 1
+-- update turma set nota3=3 where idAluno = 4 and idDisciplinaCurso = 1
+
+-- update turma set nota1=4 where idAluno = 5 and idDisciplinaCurso = 1
+-- update turma set nota2=2 where idAluno = 5 and idDisciplinaCurso = 1
+-- update turma set nota3=3 where idAluno = 5 and idDisciplinaCurso = 1
+
+-- update turma set nota1=5 where idAluno = 6 and idDisciplinaCurso = 2
+-- update turma set nota2=6 where idAluno = 6 and idDisciplinaCurso = 2
+
+-- update turma set nota1=7 where idAluno = 7 and idDisciplinaCurso = 2
+-- update turma set nota2=8 where idAluno = 7 and idDisciplinaCurso = 2
+
+-- update turma set nota1=7 where idAluno = 8 and idDisciplinaCurso = 2
+-- update turma set nota2=5 where idAluno = 8 and idDisciplinaCurso = 2
+
+-- update turma set nota1=7 where idAluno = 9 and idDisciplinaCurso = 2
+-- update turma set nota2=4 where idAluno = 9 and idDisciplinaCurso = 2
+
+-- update turma set nota1=7 where idAluno = 10 and idDisciplinaCurso = 2
+-- update turma set nota2=5 where idAluno = 10 and idDisciplinaCurso = 2
+
+-- update turma set nota1=8 where idAluno = 11 and idDisciplinaCurso = 3
+-- update turma set nota2=6 where idAluno = 11 and idDisciplinaCurso = 3
+
+-- update turma set nota1=9 where idAluno = 12 and idDisciplinaCurso = 3
+-- update turma set nota2=8 where idAluno = 12 and idDisciplinaCurso = 3
+
+-- update turma set nota1=7 where idAluno = 13 and idDisciplinaCurso = 3
+-- update turma set nota2=9 where idAluno = 13 and idDisciplinaCurso = 3
+
+-- update turma set nota1=7 where idAluno = 14 and idDisciplinaCurso = 3
+-- update turma set nota2=4 where idAluno = 14 and idDisciplinaCurso = 3
+
+-- update turma set nota1=7 where idAluno = 15 and idDisciplinaCurso = 3
+-- update turma set nota2=7 where idAluno = 15 and idDisciplinaCurso = 3
+
+-- update turma set nota1=7 where idAluno = 16 and idDisciplinaCurso = 4
+-- update turma set nota1=2 where idAluno = 17 and idDisciplinaCurso = 4
+-- update turma set nota1=5 where idAluno = 18 and idDisciplinaCurso = 4
+-- update turma set nota1=7 where idAluno = 19 and idDisciplinaCurso = 4
+-- update turma set nota1=8 where idAluno = 20 and idDisciplinaCurso = 4
+
+-- insert into pagamentos(idAluno,boleto,situacao) values(11,getdate(), 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(11,'01/01/2023', 'pendente')
+
+-- insert into pagamentos(idAluno,boleto,situacao) values(12,getdate(), 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(12,'01/01/2023', 'pendente')
+
+-- insert into pagamentos(idAluno,boleto,situacao) values(13,getdate(), 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(13,'01/01/2023', 'pendente')
+
+-- insert into pagamentos(idAluno,boleto,situacao) values(14,getdate(), 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(14,'01/01/2023', 'pendente')
+
+-- insert into pagamentos(idAluno,boleto,situacao) values(15,getdate(), 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(15,'01/01/2023', 'pendente')
+
+-- insert into pagamentos(idAluno,boleto,situacao) values(1,getdate(), 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(1,'01/01/2023', 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(1,'01/02/2023', 'pendente')
+
+-- insert into pagamentos(idAluno,boleto,situacao) values(2,getdate(), 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(2,'01/01/2023', 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(2,'01/02/2023', 'pendente')
+
+-- insert into pagamentos(idAluno,boleto,situacao) values(3,getdate(), 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(3,'01/01/2023', 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(3,'01/02/2023', 'pendente')
+
+-- insert into pagamentos(idAluno,boleto,situacao) values(4,getdate(), 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(4,'01/01/2023', 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(4,'01/02/2023', 'pendente')
+
+-- insert into pagamentos(idAluno,boleto,situacao) values(5,getdate(), 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(5,'01/01/2023', 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(5,'01/02/2023', 'pendente')
+
+-- insert into pagamentos(idAluno,boleto,situacao) values(6,getdate(), 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(6,'01/01/2023', 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(6,'01/02/2023', 'pendente')
+
+-- insert into pagamentos(idAluno,boleto,situacao) values(7,getdate(), 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(7,'01/01/2023', 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(7,'01/02/2023', 'pendente')
+
+-- insert into pagamentos(idAluno,boleto,situacao) values(8,getdate(), 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(8,'01/01/2023', 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(8,'01/02/2023', 'pendente')
+
+-- insert into pagamentos(idAluno,boleto,situacao) values(9,getdate(), 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(9,'01/01/2023', 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(9,'01/02/2023', 'pendente')
+
+-- insert into pagamentos(idAluno,boleto,situacao) values(10,getdate(), 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(10,'01/01/2023', 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(10,'01/02/2023', 'pendente')
+
+-- insert into pagamentos(idAluno,boleto,situacao) values(16,'01/10/2022', 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(16,'01/11/2022', 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(16,getdate(), 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(16,'01/01/2023', 'pendente')
+
+-- insert into pagamentos(idAluno,boleto,situacao) values(17,'01/10/2022', 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(17,'01/11/2022', 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(17,getdate(), 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(17,'01/01/2023', 'pendente')
+
+-- insert into pagamentos(idAluno,boleto,situacao) values(18,'01/10/2022', 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(18,'01/11/2022', 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(18,getdate(), 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(18,'01/01/2023', 'pendente')
+
+-- insert into pagamentos(idAluno,boleto,situacao) values(19,'01/10/2022', 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(19,'01/11/2022', 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(19,getdate(), 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(19,'01/12/2022', 'pendente')
+-- insert into pagamentos(idAluno,boleto,situacao) values(19,'01/01/2023', 'pendente')
+
+-- insert into pagamentos(idAluno,boleto,situacao) values(20,'01/10/2022', 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(20,'01/11/2022', 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(20,getdate(), 'pago')
+-- insert into pagamentos(idAluno,boleto,situacao) values(20,'01/12/2022', 'pendente')
+-- insert into pagamentos(idAluno,boleto,situacao) values(20,'01/01/2023', 'pendente')
+
+-- create or alter trigger cursoInativado on DisciplinaCurso
+-- after update
+-- as 
+-- update DisciplinaCurso set ativa = 0 where idCurso in (select id from curso where ativo = 0) or idDisciplina in(select idDisciplina from Disciplina where ativo = 0)
+
+-- create trigger turmaInativar on Turma
+-- after update
+-- as 
+-- update Turma set ativa = 0 where idDisciplinaCurso in (select idDisciplina from DisciplinaCurso where ativa = 0)
+
+-- CREATE PROCEDURE updatePagamentos
+-- AS
+-- update Pagamentos set situacao = 'em atraso' where id in (select id from Pagamentos where boleto<getdate()) and situacao = 'pendente'
+
+-- CREATE PROCEDURE mostraDisciplinas @nome varchar(30)
+-- AS
+-- select nome from Disciplina where id in (select idDisciplina from DisciplinaCurso where idDisciplina in (select idDisciplinaCurso from Turma where idAluno in (select id from Aluno where nome=@nome)))
+
+-- create view dadosAlunos
+-- as
+--     select a.nome as "Aluno", d.nome as "Curso", t.nota1, t.nota2, t.nota3, t.nota4
+--     from Aluno a join turma t on t.idAluno = a.id join disciplina d on t.idDisciplinaCurso = d.id
+
+-- create view atrasos as
+-- select nome from Aluno a join Pagamentos p on a.id = p.idAluno where p.situacao = 'em atraso'
